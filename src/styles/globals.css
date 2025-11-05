@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+    /* utility color */
+    --color-text-black: #111111;
+    --color-white-gray: #f2f3f5;
+    --color-black-gray: #d1d3d4;
+    --color-youtube-red: #ea3323;
+    --color-twitter-blue: #4c9eeb;
+
+    /* grayscale */
+    --color-white: #ffffff;
+    --color-plGy: #efefef;
+    --color-ltGy: #d4d4d4;
+    --color-mdGy: #9f9f9f;
+    --color-dkGy: #555555;
+    --color-black: #000000;
+
+    /* websafe color */
+    --color-orange: #ff3300;
+    --color-gamboge: #ff9900;
+    --color-yellow: #ffff00;
+    --color-harlequin: #33ff00;
+    --color-green: #339900;
+    --color-blue: #0066ff;
+    --color-water: #66ccff;
+    --color-orchid: #cc00ff;
+    --color-pink: #ff3399;
+
+    --color-border1: color-mix(in srgb, var(--color-black) 60%, var(--color-white));
+
+    /* font */
+    --font-def: "Helvetica Neue LT", "Helvetica Neue", Helvetica, "Hiragino Sans", "Yu Gothic", 游ゴシック体, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", メイリオ, Meiryo, sans-serif;
+    --font-num: "Times New Roman";
+    --font-eng: -apple-system, BlinkMacSystemFont;
+    --font-jpn-mincho: "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+
+    /* font size */
+    --font-size-large-6: clamp(5.1rem, 4.955rem + 0.73vw, 5.5rem); 
+    --font-size-large-5: clamp(4.1rem, 3.773rem + 1.64vw, 5rem);
+    --font-size-large-4: clamp(3.1rem, 2.773rem + 1.64vw, 4rem);
+    --font-size-large-3: clamp(2.3rem, 2.045rem + 1.27vw, 3rem);
+    --font-size-large-2: clamp(1.7rem, 1.518rem + 0.91vw, 2.2rem);
+    --font-size-large-1: clamp(1.1rem, 0.918rem + 0.91vw, 1.6rem);
+    --font-size-regular: clamp(0.9rem, 0.864rem + 0.18vw, 1rem);
+    --font-size-small-1: clamp(0.8rem, 0.764rem + 0.18vw, 0.9rem);
+    --font-size-small-2: clamp(0.7rem, 0.664rem + 0.18vw, 0.8rem);
+    --font-size-small-3: clamp(0.6rem, 0.564rem + 0.18vw, 0.7rem);
+
+    /* space */
+    --space-tight: min(8%, 1rem);
+    --space-loose: max(3%, 2rem);
+    --space-open: max(5%, 3rem);
+
+    /* box-shadow */
+    --box-shadow: 0 3px 15px rgba(90, 74, 55, 0.1);
+    --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, .08), -1rem -1rem 1.5rem rgba(255, 255, 255, 1);
+
+    /* transition */
+    --transition-all: all .3s ease;
+    --transition-all-slow: all 1s cubic-bezier(.2, 1, .2, 1);
+    --transition-nav: transform .3s cubic-bezier(.2, 1, .2, 1);
+    --transition-hover: background .3s ease, color .3s ease, border .3s ease;
+
+    /* border-radius */
+    --border-radius-5px: 5px;
+    --border-radius-10px: 10px;
+    --border-radius-15px: 15px;
+    --border-radius-50perc: 50%;
+    --border-radius-100vw: 100vw;
+}
+
+
+/* @theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    color-scheme: light dark;
+    counter-reset: cntr;
+    display: flex;
+    font-family: var(--font-notoSansJp), var(--font-def);
+    font-feature-settings: "palt" 1;
+    font-weight: 500;
+    height: 100vh;
+    height: 100svh;
+    letter-spacing: .09em;
+    line-break: strict;
+    overflow: hidden;
+    position: relative;
+    /* scrollbar-gutter: stable both-edges; */
+    text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-orchid);
+}
+
+::backdrop {
+    background: rgba(0, 0, 0, .4);
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /* height: 12px;
+    width: 8px; */
+}
+
+/* ::-webkit-scrollbar-track {
+    background: var(--color-dkGy);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-clip: content-box;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+} */
