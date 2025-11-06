@@ -1,1 +1,19 @@
-/*  */
+.header {
+    align-items: flex-start;
+    display: grid;
+    flex-basis: 30%;
+    height: 100svh;
+    place-content: center;
+    padding: var(--space-loose);
+    position: sticky;
+    top: 0;
+    width: fit-content;
+    z-index: 100;
+    > * + * {
+        margin-top: var(--space-open);
+    }
+}
+
+.lead {
+    font-size: var(--font-size-small-2);
+}
