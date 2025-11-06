@@ -9,11 +9,12 @@ import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
 
 // components
-import Header from '@/components/Header';
+import Header from '@/src/components/Header';
+import ReturnTop from '@/src/components/ReturnTop';
 
 // CSS
-import '@/styles/uaplus.css';
-import '@/styles/globals.css';
+import '@/src/styles/uaplus.css';
+import '@/src/styles/globals.css';
 
 // fonts
 const notoSansJp = Noto_Sans_JP ({
@@ -29,12 +30,15 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="ja">
             <body
                 className={`${notoSansJp.variable} antialiased`}
             >
                 <Header />
-                {children}
+                <div className="container">
+                    {children}
+                </div>
+                <ReturnTop />
             </body>
         </html>
     );

@@ -2,7 +2,7 @@
 
 :root {
     /* utility color */
-    --color-text-black: #111111;
+    --color-text-black: #212121;
     --color-white-gray: #f2f3f5;
     --color-black-gray: #d1d3d4;
     --color-youtube-red: #ea3323;
@@ -27,7 +27,8 @@
     --color-orchid: #cc00ff;
     --color-pink: #ff3399;
 
-    --color-border1: color-mix(in srgb, var(--color-black) 60%, var(--color-white));
+    /* theme color */
+    --color-paper: #f8efe2;
 
     /* font */
     --font-def: "Helvetica Neue LT", "Helvetica Neue", Helvetica, "Hiragino Sans", "Yu Gothic", 游ゴシック体, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", メイリオ, Meiryo, sans-serif;
@@ -86,8 +87,8 @@
 } */
 
 body {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: var(--color-paper);
+    color: var(--color-text-black);
     color-scheme: light dark;
     counter-reset: cntr;
     display: flex;
@@ -132,3 +133,16 @@ body {
         background-color: rgba(0, 0, 0, 0.8);
     }
 } */
+
+.container {
+    flex-basis: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .contentArea {
+        margin-top: 65px;
+    }
+}
