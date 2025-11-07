@@ -29,6 +29,7 @@
 
     /* theme color */
     --color-paper: #f8efe2;
+    --color-copy: 	#bfbfbf;
 
     /* font */
     --font-def: "Helvetica Neue LT", "Helvetica Neue", Helvetica, "Hiragino Sans", "Yu Gothic", 游ゴシック体, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", メイリオ, Meiryo, sans-serif;
@@ -87,8 +88,8 @@
 } */
 
 body {
-    background-color: var(--color-paper);
-    color: var(--color-text-black);
+    background-color: var(--color-text-black);
+    color: var(--color-copy);
     color-scheme: light dark;
     counter-reset: cntr;
     display: flex;

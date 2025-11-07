@@ -25,7 +25,8 @@ export default function Header() {
                 />
             </div>
             <p className={styles.lead}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nulla qui, rerum reiciendis a quaerat aliquam minus aliquid nobis cumque expedita repellat autem vitae, ut delectus molestias illum eius est.
+                Frontend Engineer &amp; Programmer<br />
+                Sapporo, Hokkaido, Japan
             </p>
         </header>
     );
