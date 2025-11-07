@@ -8,6 +8,6 @@
     place-content: center;
     position: fixed;
     bottom: var(--space-loose);
-    left: var(--space-loose);
+    right: var(--space-loose);
     width: 36px;
 }

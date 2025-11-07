@@ -11,26 +11,32 @@ export default function ReturnTopButton() {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
+        const target = document.querySelector('.container');
+        if (!target) return;
+
         const handleScroll = () => {
-            if (window.scrollY > 200) {
+            if (target.scrollTop > 200) {
                 setVisible(true);
             } else {
                 setVisible(false);
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        target.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            target.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     const returnTop = (): void => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
+        const target = document.querySelector('.container');
+        if (target) {
+            target.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
     };
 
     if (!visible) return null;
@@ -39,7 +45,7 @@ export default function ReturnTopButton() {
         <button
             type="button"
             onClick={returnTop}
-            className={styles.button}
+            className={`${styles.button} ${visible ? styles.visible : ''}`}
         >
             ↑
         </button>
