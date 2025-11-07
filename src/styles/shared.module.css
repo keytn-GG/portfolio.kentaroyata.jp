@@ -1,3 +1,19 @@
 .main {
     padding: var(--space-open);
 }
+
+.button {
+    display: flex;
+    font-size: var(--font-size-small-2);
+    letter-spacing: normal;
+    text-decoration: underline;
+    width: fit-content;
+    &::after {
+        content: "...";
+    }
+    &:hover,
+    &:focus-within {
+        background-color: var(--color-text-black);
+        color: var(--color-white);
+    }
+}
