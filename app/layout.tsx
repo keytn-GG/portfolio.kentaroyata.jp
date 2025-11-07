@@ -10,7 +10,6 @@ import { Noto_Sans_JP } from 'next/font/google';
 
 // components
 import Header from '@/src/components/Header';
-import ReturnTop from '@/src/components/ReturnTop';
 
 // CSS
 import '@/src/styles/uaplus.css';
@@ -38,7 +37,6 @@ export default function RootLayout({
                 <div className="container">
                     {children}
                 </div>
-                <ReturnTop />
             </body>
         </html>
     );
