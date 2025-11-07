@@ -1,5 +1,7 @@
 .header {
     align-items: flex-start;
+    background-color: var(--color-paper);
+    color: var(--color-text-black);
     display: grid;
     flex-basis: 30%;
     height: 100svh;
