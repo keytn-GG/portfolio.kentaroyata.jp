@@ -19,8 +19,9 @@ export default function Header() {
                     src="/portfolioLogo.svg"
                     alt="kentaro yataのポートフォリオサイトのロゴ"
                     className={styles.image}
-                    width={512}
-                    height={512}
+                    width={325}
+                    height={161}
+                    priority
                 />
             </div>
             <p className={styles.lead}>

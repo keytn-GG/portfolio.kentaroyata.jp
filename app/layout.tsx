@@ -7,6 +7,7 @@ export const viewport = {
 // dependencies
 import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
+import ReturnTop from '@/src/components/ReturnTop';
 
 // components
 import Header from '@/src/components/Header';
@@ -37,6 +38,7 @@ export default function RootLayout({
                 <div className="container">
                     {children}
                 </div>
+                <ReturnTop />
             </body>
         </html>
     );
