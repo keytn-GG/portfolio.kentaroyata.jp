@@ -34,9 +34,10 @@
 }
 
 .sectionTitle {
-    color: var(--color-highlight);
+    border-bottom: 1px solid currentColor;
+    color: var(--color-paper);
     font-size: var(--font-size-regular);
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
 }
 
 .sectionList {
