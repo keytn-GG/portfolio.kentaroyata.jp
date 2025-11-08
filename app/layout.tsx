@@ -10,6 +10,7 @@ import { Noto_Sans_JP } from 'next/font/google';
 import ReturnTop from '@/src/components/ReturnTop';
 
 // components
+import CursorLayer from '@/src/components/CursorLayer';
 import Header from '@/src/components/Header';
 
 // CSS
@@ -34,6 +35,7 @@ export default function RootLayout({
             <body
                 className={`${notoSansJp.variable} antialiased`}
             >
+                <CursorLayer />
                 <Header />
                 <div className="container">
                     {children}

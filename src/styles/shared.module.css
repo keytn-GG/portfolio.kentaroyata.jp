@@ -3,6 +3,7 @@
 }
 
 .button {
+    color: inherit;
     display: flex;
     font-size: var(--font-size-small-2);
     letter-spacing: normal;

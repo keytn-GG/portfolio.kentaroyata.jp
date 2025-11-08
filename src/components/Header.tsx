@@ -28,7 +28,7 @@ export default function Header() {
                 Frontend Engineer &amp; Programmer<br />
                 Sapporo, Hokkaido, Japan
             </p>
-            <Link href="/about" className={clsx(shared.button, styles.aboutButton)}>
+            <Link href="/about" className={`${shared.button} ${styles.aboutButton}`}>
                 About Me
             </Link>
         </header>
