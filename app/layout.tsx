@@ -21,10 +21,10 @@ export const metadata: Metadata = {
 // dependencies
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
-import ReturnTop from "@/src/components/ReturnTop";
 import { Analytics } from "@vercel/analytics/next";
 
 // components
+import ReturnTop from "@/src/components/ReturnTop";
 import CursorLayer from "@/src/components/CursorLayer";
 import Header from "@/src/components/Header";
 
