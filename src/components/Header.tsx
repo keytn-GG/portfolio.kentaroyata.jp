@@ -1,15 +1,15 @@
 // rendering
-'use client';
+"use client";
 
 // dependensies
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import clsx from 'clsx';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import clsx from "clsx";
 
 // CSS
-import shared from '@/src/styles/shared.module.css';
-import styles from '@/src/styles/components/header.module.css';
+import shared from "@/src/styles/shared.module.css";
+import styles from "@/src/styles/components/header.module.css";
 
 export default function Header() {
     const removeFocus = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {

@@ -1,13 +1,13 @@
 // components/CursorLayer.tsx
-'use client';
+"use client";
 
 // dependencies
-import { useEffect, useRef } from 'react';
-import { usePathname } from 'next/navigation';
-import { gsap } from 'gsap';
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import { gsap } from "gsap";
 
 // css
-import styles from '@/src/styles/components/cursorLayer.module.css';
+import styles from "@/src/styles/components/cursorLayer.module.css";
 
 export default function CursorLayer() {
     const cursorRef = useRef<HTMLDivElement>(null);
