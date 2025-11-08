@@ -34,7 +34,7 @@
 }
 
 .sectionTitle {
-    color: var(--color-border1);
+    color: var(--color-highlight);
     font-size: var(--font-size-regular);
     margin-bottom: .5rem;
 }
@@ -69,12 +69,17 @@
 
 .inspirationButton {
     border: 1px solid currentColor;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: var(--font-size-small-2);
     letter-spacing: normal;
-    color: var(--color-white);
     cursor: pointer;
     padding: 6px 16px;
+    transition: var(--transition-hover);
+    &:hover,
+    &:focus-within {
+        background-color: var(--color-paper);
+        color: var(--color-text-black);
+    }
 }
 
 .modal {
