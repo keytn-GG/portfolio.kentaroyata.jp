@@ -48,6 +48,7 @@ export default function ReturnTopButton() {
             type="button"
             onClick={returnTop}
             className={`${styles.button} ${visible ? styles.visible : ""}`}
+            aria-label="ページ先頭に戻るボタン"
         >
             <ArrowUp />
         </button>
