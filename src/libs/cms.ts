@@ -1,5 +1,5 @@
 import { client } from "@/src/libs/microcms";
-import type { Project } from "@/src/types/Project";
+import type { Project } from "@/src/types/project";
 
 // プロジェクト一覧を取得する
 export async function getProjectList(Limit = 6): Promise<Project[]> {
