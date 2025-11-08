@@ -1,13 +1,25 @@
 .button {
     background-color: var(--color-text-black);
-    border: 1px solid var(--color-dkGy);
+    border: 1px solid var(--color-paper);
     border-radius: var(--border-radius-50perc);
     color: var(--color-white);
     display: grid;
-    height: 36px;
+    height: 40px;
+    opacity: 0;
     place-content: center;
+    pointer-events: none;
     position: fixed;
+    transition: var(--transition-all);
     bottom: var(--space-loose);
     right: var(--space-loose);
-    width: 36px;
+    width: 40px;
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &:hover,
+    &:focus-within {
+        background-color: var(--color-paper);
+        color: var(--color-text-black);
+    }
 }

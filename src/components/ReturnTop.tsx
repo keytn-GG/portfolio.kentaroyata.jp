@@ -4,6 +4,9 @@
 // dependensies
 import { useState, useEffect } from "react";
 
+// components
+import { ArrowUp } from '@/src/components/Icon';
+
 // CSS
 import styles from "@/src/styles/components/returnTop.module.css";
 
@@ -29,17 +32,16 @@ export default function ReturnTopButton() {
         };
     }, []);
 
-    const returnTop = (): void => {
+    const returnTop = (e: React.MouseEvent<HTMLButtonElement>): void => {
         const target = document.querySelector(".container");
         if (target) {
             target.scrollTo({
                 top: 0,
                 behavior: "smooth",
             });
-        }
+        };
+        e.currentTarget.blur();
     };
-
-    if (!visible) return null;
 
     return (
         <button
@@ -47,7 +49,7 @@ export default function ReturnTopButton() {
             onClick={returnTop}
             className={`${styles.button} ${visible ? styles.visible : ""}`}
         >
-            ↑
+            <ArrowUp />
         </button>
     );
 }
