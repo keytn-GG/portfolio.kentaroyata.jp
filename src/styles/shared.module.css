@@ -2,6 +2,10 @@
     padding: var(--space-open);
 }
 
+.section {
+    margin-block: 5rem;
+}
+
 .button {
     color: inherit;
     display: flex;
