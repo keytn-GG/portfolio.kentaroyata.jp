@@ -1,29 +1,29 @@
 // viewport
 export const viewport = {
-    width: 'device-width',
-    initialScale: '1'
+    width: "device-width",
+    initialScale: "1"
 }
 
 // dependencies
-import type { Metadata } from 'next';
-import { Noto_Sans_JP } from 'next/font/google';
-import ReturnTop from '@/src/components/ReturnTop';
-import { Analytics } from '@vercel/analytics/next';
+import type { Metadata } from "next";
+import { Noto_Sans_JP } from "next/font/google";
+import ReturnTop from "@/src/components/ReturnTop";
+import { Analytics } from "@vercel/analytics/next";
 
 // components
-import CursorLayer from '@/src/components/CursorLayer';
-import Header from '@/src/components/Header';
+import CursorLayer from "@/src/components/CursorLayer";
+import Header from "@/src/components/Header";
 
 // CSS
-import '@/src/styles/uaplus.css';
-import '@/src/styles/globals.css';
+import "@/src/styles/uaplus.css";
+import "@/src/styles/globals.css";
 
 // fonts
 const notoSansJp = Noto_Sans_JP ({
-    subsets: ['latin'],
-    weight: ['400', '500'],
-    variable: '--font-notoSansJp',
-    display: 'swap'
+    subsets: ["latin"],
+    weight: ["400", "500"],
+    variable: "--font-notoSansJp",
+    display: "swap"
 });
 
 export default function RootLayout({
