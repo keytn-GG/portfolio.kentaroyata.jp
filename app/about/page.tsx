@@ -45,13 +45,13 @@ export default function About() {
         <main className={shared.main}>
             <Link href="./" className={shared.button}>Return Home</Link>
             <div className={shared.section}>
-                <div className={styles.image}>
+                <div className={styles.imageWrapper}>
                     <Image
                         src="/img/author.jpg"
                         alt="kentaro yataの写真"
                         width={270}
                         height={270}
-                        className={styles.imageElem}
+                        className={styles.image}
                         priority
                     />
                 </div>
