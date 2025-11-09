@@ -8,7 +8,7 @@ import { Project } from "@/src/types/project";
 type Props = { project: Project };
 
 // CSS
-import styles from "@/src/styles/components/project/projectCard.module.css";
+import styles from "@/src/styles/components/projects/projectCard.module.css";
 
 export default function ProjectCard({ project }: Props) {
     const published = formatDateJP(project.publishedAt);

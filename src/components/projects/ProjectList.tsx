@@ -1,12 +1,12 @@
 // component
-import ProjectCard from "@/src/components/project/ProjectCard";
+import ProjectCard from "@/src/components/projects/ProjectCard";
 
 // types
 import type { Project } from "@/src/types/project";
 type Props = { projects: Project[] };
 
 // CSS
-import styles from "@/src/styles/components/project/projectList.module.css";
+import styles from "@/src/styles/components/projects/projectList.module.css";
 
 export default function ProjectList({ projects }: Props) {
     if (projects.length === 0) {
