@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // components
-import { inspirationItems } from '@/src/libs/inspirationItems';
+import { inspirationItems } from '@/src/lib/inspirationItems';
 
 // styles
 import shared from "@/src/styles/shared.module.css";

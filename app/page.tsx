@@ -5,7 +5,7 @@ export const revalidate = 60;
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getProjectsPage } from "@/src/libs/cms";
+import { getProjectsPage } from "@/src/lib/cms";
 
 // component
 import ProjectList from "@/src/components/project/ProjectList";
