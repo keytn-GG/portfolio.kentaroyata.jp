@@ -17,10 +17,10 @@ export default function ProjectCard({ project }: Props) {
     return (
         <li className={styles.listItems}>
             <Link
-                href="{`/projects/${project.slug}`}"
+                href={`/projects/${project.slug}`}
                 className={styles.link}
             >
-                <div className={styles.imageWrap}>
+                <div className={styles.imageWrapper}>
                 {project.cover?.url ? (
                     <Image
                         src={project.cover.url}
@@ -42,19 +42,29 @@ export default function ProjectCard({ project }: Props) {
                             {project.lead}
                         </p>
                     }
-                    <div className={styles.data}>
+                    <div className={styles.meta}>
                         {published && 
-                            <time dateTime={project.publishedAt} className={styles.date}>
+                            <time dateTime={published} className={styles.date}>
                                 <span className={styles.metaTitle}>Published:</span>
                                 {published}
                             </time>
                         }
                         {updated && 
-                            <time dateTime={project.updatedAt} className={styles.date}>
+                            <time dateTime={updated} className={styles.date}>
                                 <span className={styles.metaTitle}>Updated:</span>
                                 {updated}
                             </time>
                         }
+                        {project.tech && project.tech.length > 0 && (
+                            <div className={styles.tech}>
+                                <span className={styles.metaTitle}>Tech:</span>
+                                <ul className={styles.techList}>
+                                    {project.tech.map((tech) => (
+                                        <li key={tech} className={styles.techItems}>{tech}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 </div>
             </Link>

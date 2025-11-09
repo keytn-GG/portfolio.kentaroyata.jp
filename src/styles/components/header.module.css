@@ -1,6 +1,7 @@
 .header {
     align-items: flex-start;
     background-color: var(--color-paper);
+    box-shadow: var(--box-shadow-dark);
     color: var(--color-text-black);
     display: grid;
     flex-basis: 30%;

@@ -21,7 +21,7 @@ export default async function Home() {
     const projects: Project[] = await getProjectList();
 
     return (
-        <main className={shared.main}>
+        <main className={styles.main}>
             <ProjectList projects={projects} />
         </main>
     );
