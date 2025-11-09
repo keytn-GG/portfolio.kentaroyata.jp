@@ -3,8 +3,6 @@ export const revalidate = 60;
 
 // dependensies
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 import { getProjectsPage } from "@/src/lib/cms";
 
 // component
@@ -12,7 +10,6 @@ import ProjectList from "@/src/components/project/ProjectList";
 import Pagination from "@/src/components/ui/Pagination";
 
 // CSS
-import shared from "@/src/styles/shared.module.css";
 import styles from "@/src/styles/pages/home.module.css";
 
 export default async function Home() {

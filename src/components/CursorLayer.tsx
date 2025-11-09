@@ -1,4 +1,4 @@
-// components/CursorLayer.tsx
+// rendering
 "use client";
 
 // dependencies

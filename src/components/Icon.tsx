@@ -1,6 +1,7 @@
 // dependensies
 import { Icon, type IconProps } from '@iconify/react';
 
+// types
 type IconBaseProps = Omit<IconProps, 'icon'>;
 
 export function ArrowUp(props: IconBaseProps) {
