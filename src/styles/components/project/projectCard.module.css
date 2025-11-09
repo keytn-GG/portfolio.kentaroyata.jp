@@ -1,10 +1,8 @@
 .listItems {
-    border-bottom: 1px solid var(--color-paper);
+    border: 1px solid var(--color-paper);
+    border-width: 1px 1px 1px 0;
     &:nth-child(3n + 1) {
-        border-right: 1px solid var(--color-paper);
-    }
-    &:nth-child(3n + 2) {
-        border-right: 1px solid var(--color-paper);
+        border-width: 1px;
     }
 }
 
