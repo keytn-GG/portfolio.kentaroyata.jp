@@ -3,7 +3,7 @@ export const revalidate = 60;
 
 // dependensies
 import { notFound, redirect } from "next/navigation";
-import { getProjectsPage } from "@/src/libs/cms";
+import { getProjectsPage } from "@/src/lib/cms";
 import ProjectList from "@/src/components/project/ProjectList";
 import Pagination from "@/src/components/ui/Pagination";
 

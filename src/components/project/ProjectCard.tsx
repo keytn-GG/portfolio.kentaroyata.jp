@@ -1,7 +1,7 @@
 // dependensies
 import Link from "next/link";
 import Image from "next/image";
-import { formatDateJP } from "@/src/libs/datetime";
+import { formatDateJP } from "@/src/lib/datetime";
 
 // types
 import { Project } from "@/src/types/project";
