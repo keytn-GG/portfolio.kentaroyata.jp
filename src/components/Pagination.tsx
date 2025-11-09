@@ -11,7 +11,7 @@ type Props = {
 };
 
 // CSS
-import styles from "@/src/styles/ui/paginaion.module.css";
+import styles from "@/src/styles/paginaion.module.css";
 
 const Pagination: FC<Props> = ({
     current,

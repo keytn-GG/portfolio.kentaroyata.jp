@@ -7,7 +7,7 @@ import { getProjectsPage } from "@/src/lib/cms";
 
 // component
 import ProjectList from "@/src/components/project/ProjectList";
-import Pagination from "@/src/components/ui/Pagination";
+import Pagination from "@/src/components/Pagination";
 
 // CSS
 import styles from "@/src/styles/pages/home.module.css";

@@ -5,7 +5,7 @@ export const revalidate = 60;
 import { notFound, redirect } from "next/navigation";
 import { getProjectsPage } from "@/src/lib/cms";
 import ProjectList from "@/src/components/project/ProjectList";
-import Pagination from "@/src/components/ui/Pagination";
+import Pagination from "@/src/components/Pagination";
 
 export default async function Paged({
     params,
