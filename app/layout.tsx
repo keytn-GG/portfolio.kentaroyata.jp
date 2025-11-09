@@ -51,7 +51,7 @@ export default function RootLayout({
                 className={`${notoSansJp.variable} antialiased`}
             >
                 <Analytics/>
-                <CursorLayer />
+                {/* <CursorLayer /> */}
                 <Header />
                 <div className="container">
                     {children}
