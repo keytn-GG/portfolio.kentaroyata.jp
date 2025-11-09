@@ -6,7 +6,7 @@ export function formatDateJP(input?: string | null) {
 
     return d.toLocaleDateString("ja-JP", {
         year: "numeric",
-        month: "short",
-        day: "numeric",
+        month: '2-digit',
+        day: '2-digit',
     });
 }
