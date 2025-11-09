@@ -7,13 +7,13 @@ import { getProjectsPage } from "@/src/libs/cms";
 import ProjectList from "@/src/components/project/ProjectList";
 import Pagination from "@/src/components/ui/Pagination";
 
-// types
-type Props = {
-    params: {page: string}
-};
-
-export default async function Paged({params}: Props) {
-    const current = Number(params.page);
+export default async function Paged({
+    params,
+}: {
+    params: Promise<{ page: string }>;
+}) {
+    const { page } = await params;
+    const current = Number(page);
     if (!Number.isFinite(current) || current < 1) redirect("/");
 
     const PAGE_SIZE = 12;
