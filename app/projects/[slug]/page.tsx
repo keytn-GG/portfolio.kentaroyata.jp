@@ -49,42 +49,53 @@ export default async function ProjectDetail({ params }: any) {
                 Return To List
             </Link>
             <div className={shared.section}>
-                <h1>{project.title}</h1>
-                {(published || updated) && (
-                    <div style={{ color: '#6b7280', fontSize: 14, display: 'flex', gap: 16 }}>
-                        {published && <span>公開: {published}</span>}
-                        {updated && <span>更新: {updated}</span>}
-                    </div>
-                )}
                 {project.cover?.url ? (
-                    <div style={{ marginTop: 16 }}>
-                    <Image
-                        src={project.cover.url}
-                        alt={project.title}
-                        width={768}
-                        height={432}
-                        priority
-                    />
+                    <div className={styles.imageWrapper}>
+                        <Image
+                            src={project.cover.url}
+                            alt={project.title}
+                            width={768}
+                            height={432}
+                            className={styles.image}
+                            priority
+                        />
                     </div>
                 ) : (
                     <div />
                 )}
-                {project.lead && <p className={styles.lead}>{project.lead}</p>}
-
-                {Array.isArray(project.tech) && project.tech.length > 0 && (
-                    <ul className={styles.techList}>
-                    {project.tech.map((t) => (
-                        <li key={t} className={styles.techItems}>
-                            {t}
-                        </li>
-                    ))}
-                    </ul>
-                )}
+                <hgroup className={styles.hgroup}>
+                    <h1 className={styles.title}>{project.title}</h1>
+                    {project.lead && <p className={styles.lead}>{project.lead}</p>}
+                </hgroup>
+                <div className={styles.meta}>
+                    {published && 
+                        <time dateTime={published} className={styles.date}>
+                            <span className={styles.metaTitle}>Published:</span>
+                            {published}
+                        </time>
+                    }
+                    {updated && 
+                        <time dateTime={updated} className={styles.date}>
+                            <span className={styles.metaTitle}>Updated:</span>
+                            {updated}
+                        </time>
+                    }
+                    {project.tech && project.tech.length > 0 && (
+                        <div className={styles.tech}>
+                            <span className={styles.metaTitle}>Tech:</span>
+                            <ul className={styles.techList}>
+                                {project.tech.map((tech) => (
+                                    <li key={tech} className={styles.techItems}>{tech}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
                 {project.body && (
                     <article
                     // TODO: 本番では isomorphic-dompurify 等で sanitize してから描画する
                     dangerouslySetInnerHTML={{ __html: project.body }}
-                    className={styles.article}
+                    className={styles.body}
                     />
                 )}
                 {(project.url || project.repo) && (
