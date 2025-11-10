@@ -20,3 +20,14 @@
 .lead {
     font-size: var(--font-size-small-2);
 }
+
+@media (max-width: 1000px) {
+    .header {
+        flex-basis: auto;
+        height: var(--header-height);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}

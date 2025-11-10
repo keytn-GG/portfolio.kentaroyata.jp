@@ -72,6 +72,9 @@
     --border-radius-15px: 15px;
     --border-radius-50perc: 50%;
     --border-radius-100vw: 100vw;
+
+    /* custom property */
+    --header-height: 60px;
 }
 
 
@@ -137,14 +140,18 @@ body {
     }
 } */
 
-.container {
+.contentArea {
     flex-basis: 0;
     flex-grow: 1;
     overflow-y: auto;
     position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+    body {
+        display: block;
+        height: auto;
+    }
     .contentArea {
         margin-top: 65px;
     }

@@ -53,7 +53,7 @@ export default function RootLayout({
                 <Analytics/>
                 {/* <CursorLayer /> */}
                 <Header />
-                <div className="container">
+                <div className="contentArea">
                     {children}
                 </div>
                 <ReturnTop />
