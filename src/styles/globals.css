@@ -63,7 +63,7 @@
     /* transition */
     --transition-all: all .3s ease;
     --transition-all-slow: all 1s cubic-bezier(.2, 1, .2, 1);
-    --transition-nav: transform .3s cubic-bezier(.2, 1, .2, 1);
+    --transition-nav: transform .6s cubic-bezier(.2, 1, .2, 1);
     --transition-hover: background .3s ease, color .3s ease, border .3s ease;
 
     /* border-radius */
@@ -153,6 +153,6 @@ body {
         height: auto;
     }
     .contentArea {
-        margin-top: 65px;
+        margin-top: var(--header-height);
     }
 }

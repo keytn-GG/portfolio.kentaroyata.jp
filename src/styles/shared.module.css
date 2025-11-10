@@ -22,3 +22,9 @@
         color: var(--color-white);
     }
 }
+
+@media (max-width: 1000px) {
+    .main {
+        padding: var(--space-loose);
+    }
+}
