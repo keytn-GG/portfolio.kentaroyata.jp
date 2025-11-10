@@ -13,6 +13,7 @@
     bottom: var(--space-loose);
     right: var(--space-loose);
     width: 40px;
+    z-index: 10000;
     &.visible {
         cursor: pointer;
         opacity: 1;

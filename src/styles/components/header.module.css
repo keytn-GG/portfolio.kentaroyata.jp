@@ -2,16 +2,19 @@
     align-items: flex-start;
     background-color: var(--color-paper);
     box-shadow: var(--box-shadow-dark);
-    color: var(--color-text-black);
-    display: grid;
     flex-basis: 30%;
     height: 100svh;
-    place-content: center;
-    padding: var(--space-loose);
     position: sticky;
     top: 0;
-    width: fit-content;
     z-index: 100;
+}
+
+.headerContent {
+    color: var(--color-text-black);
+    display: grid;
+    height: 100%;
+    place-content: center;
+    padding: var(--space-loose);
     > * + * {
         margin-top: var(--space-open);
     }
@@ -21,7 +24,7 @@
     font-size: var(--font-size-small-2);
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     .header {
         flex-basis: auto;
         height: var(--header-height);
@@ -30,4 +33,4 @@
         left: 0;
         width: 100%;
     }
-}
+} */

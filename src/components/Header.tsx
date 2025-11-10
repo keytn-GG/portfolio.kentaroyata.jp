@@ -17,23 +17,25 @@ export default function Header() {
     }
     return (
         <header className={styles.header}>
-            <div className={styles.imageWrapper}>
-                <Image
-                    src="/portfolioLogo.svg"
-                    alt="kentaro yataのポートフォリオサイトのロゴ"
-                    className={styles.image}
-                    width={325}
-                    height={161}
-                    priority
-                />
+            <div className={styles.headerContent}>
+                <div className={styles.imageWrapper}>
+                    <Image
+                        src="/portfolioLogo.svg"
+                        alt="kentaro yataのポートフォリオサイトのロゴ"
+                        className={styles.image}
+                        width={325}
+                        height={161}
+                        priority
+                    />
+                </div>
+                <p className={styles.lead}>
+                    Frontend Engineer &amp; Programmer<br />
+                    Sapporo, Hokkaido, Japan
+                </p>
+                <Link href="/about" className={`${shared.button} ${styles.aboutButton}`} onClick={removeFocus}>
+                    About Me
+                </Link>
             </div>
-            <p className={styles.lead}>
-                Frontend Engineer &amp; Programmer<br />
-                Sapporo, Hokkaido, Japan
-            </p>
-            <Link href="/about" className={`${shared.button} ${styles.aboutButton}`} onClick={removeFocus}>
-                About Me
-            </Link>
         </header>
     );
 }
