@@ -1,5 +1,11 @@
 .list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 1rem;
+    padding: var(--space-tight);
+}
+
+@media (max-width: 1000px) {
+    .list {
+        padding: var(--space-loose);
+    }
 }

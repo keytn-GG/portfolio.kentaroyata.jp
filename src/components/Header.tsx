@@ -12,11 +12,24 @@ import shared from "@/src/styles/shared.module.css";
 import styles from "@/src/styles/components/header.module.css";
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
     const removeFocus = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.currentTarget.blur();
+        setIsOpen(false);
     }
     return (
-        <header className={styles.header}>
+        <header className={clsx(styles.header, isOpen && styles.active)}>
+            <button
+                type='button'
+                className={styles.navButton}
+                aria-expanded={isOpen}
+                aria-controls='nav'
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                <span className={styles.navButtonBar}></span>
+                <span className={styles.navButtonBar}></span>
+                <span className={styles.navButtonBar}></span>
+            </button>
             <div className={styles.headerContent}>
                 <div className={styles.imageWrapper}>
                     <Image
