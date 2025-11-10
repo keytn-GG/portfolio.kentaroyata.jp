@@ -14,7 +14,7 @@ export default function ReturnTopButton() {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        const target = document.querySelector(".container");
+        const target = document.querySelector(".contentArea");
         if (!target) return;
 
         const handleScroll = () => {
@@ -33,7 +33,7 @@ export default function ReturnTopButton() {
     }, []);
 
     const returnTop = (e: React.MouseEvent<HTMLButtonElement>): void => {
-        const target = document.querySelector(".container");
+        const target = document.querySelector(".contentArea");
         if (target) {
             target.scrollTo({
                 top: 0,
