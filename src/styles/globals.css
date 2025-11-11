@@ -154,6 +154,8 @@ body {
         overflow: auto;
     }
     .contentArea {
+        height: 100svh;
+        height: 100vh;
         margin-top: var(--header-height);
     }
 }
