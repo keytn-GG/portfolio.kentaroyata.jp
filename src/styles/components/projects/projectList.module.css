@@ -19,5 +19,6 @@
 @media (max-width:559px) {
     .list {
         grid-template-columns: 1fr;
+        row-gap: var(--space-tight);
     }
 }
