@@ -89,3 +89,9 @@
         }
     }
 }
+
+@media (max-width:559px) {
+    .listItems {
+        border-width: 1px;
+    }
+}
