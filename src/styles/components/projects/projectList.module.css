@@ -9,3 +9,15 @@
         padding: var(--space-loose);
     }
 }
+
+@media (max-width:768px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:559px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+}
