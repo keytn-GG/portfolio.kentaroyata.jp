@@ -25,3 +25,10 @@
         color: var(--color-text-black);
     }
 }
+
+@media (max-width:559px) {
+    .button {
+        bottom: var(--space-tight);
+        right: var(--space-tight);
+    }
+}
