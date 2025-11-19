@@ -46,7 +46,7 @@ export default async function ProjectDetail({ params }: any) {
     return (
         <main className={shared.main}>
             <Link href="/" className={`${shared.button} ${styles.aboutButton}`}>
-                Return To List
+                Return Home
             </Link>
             <div className={shared.section}>
                 {project.cover?.url ? (
