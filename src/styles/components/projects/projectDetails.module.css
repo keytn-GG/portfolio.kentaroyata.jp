@@ -83,6 +83,11 @@
         list-style: auto;
         padding-left: 2rem;
     }
+    code {
+        background-color: var(--color-dkGy);
+        border-radius: 3px;
+        padding: .2rem;
+    }
     pre {
         background-color: var(--color-text-black);
         border: 1px solid var(--color-copy);
@@ -91,5 +96,8 @@
         line-height: 1.4;
         overflow-x: auto;
         padding: var(--space-loose);
+        code {
+            background-color: inherit;
+        }
     }
 }
