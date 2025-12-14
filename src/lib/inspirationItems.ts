@@ -5,7 +5,7 @@ export const inspirationItems = [
     },
     {
         label: '好きなゲーム',
-        description: 'WarframeとRainbow Six Siege Xが好き。\nOuter Wilds 2発表まってます',
+        description: 'ARMORED COREシリーズとWarframeとRainbow Six Siege Xが好き。\nOuter Wilds 2発表まってます',
     },
     {
         label: 'つよPC',
