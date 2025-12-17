@@ -17,5 +17,5 @@ export function NextIcon(props: IconBaseProps) {
 }
 
 export function OpenInNew(props: IconBaseProps) {
-    return <Icon icon="material-symbols:open_in_new" width="24" height="24" {...props} />;
+    return <Icon icon="material-symbols:open-in-new" width="24" height="24" {...props} />;
 }

@@ -60,14 +60,20 @@
     margin-top: var(--space-loose);
     width: fit-content;
     .projectLink {
+        align-items: center;
         border: 1px solid currentColor;
         border-radius: 5px;
-        display: grid;
+        column-gap: 10px;
+        display: flex;
         font-size: var(--font-size-small-2);
+        justify-content: center;
         letter-spacing: normal;
         padding: 10px 30px;
-        place-content: center;
         transition: var(--transition-hover);
+        svg {
+            height: 14px;
+            width: 14px;
+        }
         &:hover,
         &:focus-within {
             background-color: var(--color-paper);
