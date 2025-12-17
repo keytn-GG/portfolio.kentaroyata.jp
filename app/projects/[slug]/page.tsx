@@ -90,6 +90,20 @@ export default async function ProjectDetail({ params }: any) {
                             </ul>
                         </div>
                     )}
+                    {(project.url || project.repo) && (
+                        <div className={styles.projectLink}>
+                            {project.url && (
+                                <a href={project.url} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                                    View Project
+                                </a>
+                            )}
+                            {project.repo && (
+                                <a href={project.repo} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                                    View Repository
+                                </a>
+                            )}
+                        </div>
+                    )}
                 </div>
                 {project.body && (
                     <article
@@ -97,26 +111,6 @@ export default async function ProjectDetail({ params }: any) {
                     dangerouslySetInnerHTML={{ __html: project.body }}
                     className={styles.body}
                     />
-                )}
-                {(project.url || project.repo) && (
-                    <div className={styles.url}>
-                    {project.url && (
-                        <p>
-                            公開URL:{' '}
-                            <a href={project.url} target="_blank" rel="noopener noreferrer">
-                                {project.url}
-                            </a>
-                        </p>
-                    )}
-                    {project.repo && (
-                        <p>
-                            リポジトリ:{' '}
-                            <a href={project.repo} target="_blank" rel="noopener noreferrer">
-                                {project.repo}
-                            </a>
-                        </p>
-                    )}
-                    </div>
                 )}
             </div>
         </main>
