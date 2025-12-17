@@ -1,3 +1,9 @@
+.pageNav {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
 .hgroup {
     font-size: var(--font-size-regular);
     margin-block: var(--space-loose);
@@ -125,5 +131,12 @@
         code {
             background-color: inherit;
         }
+    }
+}
+
+@media (max-width: 559px) {
+    .pageNav {
+        flex-direction: column;
+        gap: var(--space-loose);
     }
 }

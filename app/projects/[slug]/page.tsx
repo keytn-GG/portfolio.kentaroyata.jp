@@ -47,19 +47,21 @@ export default async function ProjectDetail({ params }: any) {
 
     return (
         <main className={shared.main}>
-            <div>
+            <div className={styles.pageNav}>
                 <Link href="/" className={`${shared.button} ${styles.aboutButton}`}>
                     Return Home
                 </Link>
-                <div>
+                <div className={styles.projectNav}>
                     {prev && (
                         <Link href={`/projects/${prev.slug}`} className={`${shared.button} ${styles.navButton}`}>
-                            ← {prev.title}
+                            {/* ← {prev.title} */}
+                            ← 前の記事
                         </Link>
                     )}
                     {next && (
                         <Link href={`/projects/${next.slug}`} className={`${shared.button} ${styles.navButton}`}>
-                            {next.title} →
+                            {/* {next.title} → */}
+                            次の記事 →
                         </Link>
                     )}
                 </div>
