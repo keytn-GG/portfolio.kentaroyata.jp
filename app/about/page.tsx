@@ -1,11 +1,6 @@
 // rendering
 export const dynamic = "force-static";
 
-// metadata
-export const metadata: Metadata = {
-    title: 'ABOUT - KENTARO YATA PORTFOLIO - Frontend Engineer & Plogrammer, Sapporo, Hokkaido, Japan',
-};
-
 // dependensies
 import React from "react";
 import type { Metadata } from 'next';
@@ -18,6 +13,11 @@ import { inspirationItems } from '@/src/lib/inspirationItems';
 // styles
 import shared from "@/src/styles/shared.module.css";
 import styles from "@/src/styles/pages/about.module.css";
+
+// metadata
+export const metadata: Metadata = {
+    title: 'ABOUT - KENTARO YATA PORTFOLIO - Frontend Engineer & Plogrammer, Sapporo, Hokkaido, Japan',
+};
 
 const skillItems = [
     { label: 'HTML' },
