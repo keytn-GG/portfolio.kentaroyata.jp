@@ -1,6 +1,21 @@
 // rendering
 export const revalidate = 60;
 
+// dependensies
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { getProjectBySlug, getProjectNavBySlug } from '@/src/lib/cms';
+import { formatDateJP } from '@/src/lib/datetime';
+import { OpenInNew } from '@/src/components/Icon';
+
+// types
+import type { Project } from '@/src/types/project';
+
+// CSS
+import shared from "@/src/styles/shared.module.css";
+import styles from "@/src/styles/components/projects/projectDetails.module.css";
+
 // metadata
 export async function generateMetadata({ params }: any) {
     const { slug } = await params as { slug: string };
@@ -21,21 +36,6 @@ export async function generateMetadata({ params }: any) {
     };
 }
 
-// dependensies
-import Image from 'next/image';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { getProjectBySlug } from '@/src/lib/cms';
-import { formatDateJP } from '@/src/lib/datetime';
-import { OpenInNew } from '@/src/components/Icon'; 
-
-// types
-import type { Project } from '@/src/types/project';
-
-// CSS
-import shared from "@/src/styles/shared.module.css";
-import styles from "@/src/styles/components/projects/projectDetails.module.css";
-
 export default async function ProjectDetail({ params }: any) {
     const { slug } = await params as { slug: string };
     const project: Project | null = await getProjectBySlug(slug);
@@ -43,12 +43,27 @@ export default async function ProjectDetail({ params }: any) {
 
     const published = project.publishedAt ? formatDateJP(project.publishedAt) : null;
     const updated   = project.updatedAt   ? formatDateJP(project.updatedAt)   : null;
+    const { prev, next } = await getProjectNavBySlug(slug);
 
     return (
         <main className={shared.main}>
-            <Link href="/" className={`${shared.button} ${styles.aboutButton}`}>
-                Return Home
-            </Link>
+            <div>
+                <Link href="/" className={`${shared.button} ${styles.aboutButton}`}>
+                    Return Home
+                </Link>
+                <div>
+                    {prev && (
+                        <Link href={`/projects/${prev.slug}`} className={`${shared.button} ${styles.navButton}`}>
+                            ← {prev.title}
+                        </Link>
+                    )}
+                    {next && (
+                        <Link href={`/projects/${next.slug}`} className={`${shared.button} ${styles.navButton}`}>
+                            {next.title} →
+                        </Link>
+                    )}
+                </div>
+            </div>
             <div className={shared.section}>
                 {project.cover?.url ? (
                     <div className={styles.imageWrapper}>

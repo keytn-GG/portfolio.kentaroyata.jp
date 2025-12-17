@@ -63,3 +63,55 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
         return null;
     }
 }
+
+export async function getProjectNavBySlug(slug: string): Promise<{
+    prev: Pick<Project, "id" | "slug" | "title"> | null;
+    next: Pick<Project, "id" | "slug" | "title"> | null;
+}> {
+    try {
+        // まず現在の記事を取得（publishedAt が必要）
+        const current = await client.getList<Project>({
+            endpoint: "projects",
+            queries: {
+                filters: `slug[equals]${encodeURIComponent(slug)}`,
+                limit: 1,
+            },
+        });
+
+        const project = current.contents[0];
+        if (!project?.publishedAt) {
+            return { prev: null, next: null };
+        }
+
+        const publishedAt = project.publishedAt;
+
+        const prevRes = await client.getList<Project>({
+            endpoint: "projects",
+            queries: {
+                filters: `publishedAt[less_than]${publishedAt}`,
+                orders: "-publishedAt",
+                limit: 1,
+                fields: "id,slug,title",
+            },
+        });
+
+        const nextRes = await client.getList<Project>({
+            endpoint: "projects",
+            queries: {
+                filters: `publishedAt[greater_than]${publishedAt}`,
+                orders: "publishedAt",
+                limit: 1,
+                fields: "id,slug,title",
+            },
+        });
+
+        return {
+            prev: prevRes.contents[0] ?? null,
+            next: nextRes.contents[0] ?? null,
+        };
+    } catch (error) {
+        console.error("❌ getProjectNavBySlug failed:", error);
+        return { prev: null, next: null };
+    }
+}
+
