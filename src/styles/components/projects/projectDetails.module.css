@@ -56,6 +56,26 @@
     }
 }
 
+.projectButton {
+    margin-top: var(--space-loose);
+    width: fit-content;
+    .projectLink {
+        border: 1px solid currentColor;
+        border-radius: 5px;
+        display: grid;
+        font-size: var(--font-size-small-2);
+        letter-spacing: normal;
+        padding: 10px 30px;
+        place-content: center;
+        transition: var(--transition-hover);
+        &:hover,
+        &:focus-within {
+            background-color: var(--color-paper);
+            color: var(--color-text-black);
+        }
+    }
+}
+
 .body {
     border-top: 1px solid var(--color-border1);
     border-bottom: 1px solid var(--color-border1);

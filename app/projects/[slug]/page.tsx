@@ -27,6 +27,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProjectBySlug } from '@/src/lib/cms';
 import { formatDateJP } from '@/src/lib/datetime';
+import { OpenInNew } from '@/src/components/Icon'; 
 
 // types
 import type { Project } from '@/src/types/project';
@@ -91,15 +92,15 @@ export default async function ProjectDetail({ params }: any) {
                         </div>
                     )}
                     {(project.url || project.repo) && (
-                        <div className={styles.projectLink}>
+                        <div className={styles.projectButton}>
                             {project.url && (
-                                <a href={project.url} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                                    View Project
+                                <a href={project.url} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                                    View Project <OpenInNew />
                                 </a>
                             )}
                             {project.repo && (
-                                <a href={project.repo} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                                    View Repository
+                                <a href={project.repo} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                                    View Repository <OpenInNew />
                                 </a>
                             )}
                         </div>
