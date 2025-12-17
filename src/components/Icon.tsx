@@ -15,3 +15,7 @@ export function PrevIcon(props: IconBaseProps) {
 export function NextIcon(props: IconBaseProps) {
     return <Icon icon="material-symbols:arrow-forward-ios" width="24" height="24" {...props} />;
 }
+
+export function OpenInNew(props: IconBaseProps) {
+    return <Icon icon="material-symbols:open_in_new" width="24" height="24" {...props} />;
+}
