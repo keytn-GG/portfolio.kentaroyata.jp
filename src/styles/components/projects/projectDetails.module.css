@@ -87,7 +87,7 @@
         }
 
         &:hover,
-        &:focus-within {
+        &:focus-visible {
             background-color: var(--color-paper);
             color: var(--color-text-black);
         }

@@ -13,7 +13,7 @@
     padding: 2rem;
     transition: var(--transition-hover);
     &:hover,
-    &:focus-within {
+    &:focus-visible {
         background-color: var(--color-paper);
         color: var(--color-text-black);
         .imageWrapper {
