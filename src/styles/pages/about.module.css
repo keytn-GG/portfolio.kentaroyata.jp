@@ -68,7 +68,7 @@
     padding: 6px 16px;
     transition: var(--transition-hover);
     &:hover,
-    &:focus-within {
+    &:focus-visible {
         background-color: var(--color-paper);
         color: var(--color-text-black);
     }

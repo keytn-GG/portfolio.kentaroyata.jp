@@ -24,10 +24,12 @@
     letter-spacing: .09em;
     margin-block: var(--space-loose);
     padding-bottom: var(--space-loose);
+
     time {
         display: block;
     }
-    > * + * {
+
+    >*+* {
         margin-top: var(--space-tight);
     }
 }
@@ -55,6 +57,7 @@
     &::after {
         content: ", ";
     }
+
     &:last-child {
         &::after {
             display: none;
@@ -65,6 +68,7 @@
 .projectButton {
     margin-top: var(--space-loose);
     width: fit-content;
+
     .projectLink {
         align-items: center;
         border: 1px solid currentColor;
@@ -76,12 +80,14 @@
         letter-spacing: normal;
         padding: 10px 30px;
         transition: var(--transition-hover);
+
         svg {
             height: 14px;
             width: 14px;
         }
+
         &:hover,
-        &:focus-within {
+        &:focus-visible {
             background-color: var(--color-paper);
             color: var(--color-text-black);
         }
@@ -89,8 +95,6 @@
 }
 
 .body {
-    border-top: 1px solid var(--color-border1);
-    border-bottom: 1px solid var(--color-border1);
     font-size: var(--font-size-small-2);
     font-weight: 400;
     line-height: 2.2;
@@ -100,9 +104,15 @@
     }
 
     h2 {
-        font-size: 1.4em;
+        font-size: 1.6em;
         font-weight: 500;
         margin-top: var(--space-open);
+    }
+
+    h3 {
+        font-size: 1.4em;
+        font-weight: 500;
+        margin-top: var(--space-loose);
     }
 
     p {
@@ -115,11 +125,13 @@
         list-style: auto;
         padding-left: 2rem;
     }
+
     code {
-        background-color: var(--color-dkGy);
+        background-color: var(--color-dark);
         border-radius: 3px;
         padding: .2rem;
     }
+
     pre {
         background-color: var(--color-text-black);
         border: 1px solid var(--color-copy);
@@ -128,9 +140,15 @@
         line-height: 1.4;
         overflow-x: auto;
         padding: var(--space-loose);
+
         code {
             background-color: inherit;
         }
+    }
+
+    figure {
+        margin-block: var(--space-loose);
+        max-width: 768px;
     }
 }
 

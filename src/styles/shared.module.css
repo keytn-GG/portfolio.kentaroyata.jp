@@ -17,7 +17,7 @@
         content: "...";
     }
     &:hover,
-    &:focus-within {
+    &:focus-visible {
         background-color: var(--color-text-black);
         color: var(--color-white);
     }
