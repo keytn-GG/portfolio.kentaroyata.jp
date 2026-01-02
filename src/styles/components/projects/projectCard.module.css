@@ -1,10 +1,10 @@
-.listItems {
+/* .listItems {
     border: 1px solid var(--color-paper);
     border-width: 1px 1px 1px 0;
     &:nth-child(3n + 1) {
         border-width: 1px;
     }
-}
+} */
 
 .link {
     display: flex;
@@ -14,14 +14,14 @@
     transition: var(--transition-hover);
     &:hover,
     &:focus-visible {
-        background-color: var(--color-paper);
-        color: var(--color-text-black);
+        background-color: var(--color-dark);
+        /* color: var(--color-text-black); */
         .imageWrapper {
             filter: none;
         }
-        .metaTitle {
+        /* .metaTitle {
             color: var(--color-text-black);
-        }
+        } */
     }
 }
 
@@ -90,8 +90,8 @@
     }
 }
 
-@media (max-width:559px) {
+/* @media (max-width:559px) {
     .listItems {
         border-width: 1px;
     }
-}
+} */

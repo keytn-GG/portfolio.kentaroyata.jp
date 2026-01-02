@@ -1,7 +1,7 @@
 .list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: var(--space-tight);
+    /* padding: var(--space-tight); */
 }
 
 @media (max-width: 1000px) {
