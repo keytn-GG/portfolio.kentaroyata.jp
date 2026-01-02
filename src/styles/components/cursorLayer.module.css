@@ -1,7 +1,7 @@
 .cursor {
     background-color: rgba(34, 34, 34, .8);
     border: 1px solid var(--color-white);
-    border-radius: var(--border-radius-50perc);
+    border-radius: var(--border-radius-round);
     height: 14px;
     width: 14px;
     position: fixed;
@@ -20,7 +20,7 @@
 
 .follower {
     background-color: rgba(159, 159, 159, 0.3);
-    border-radius: var(--border-radius-50perc);
+    border-radius: var(--border-radius-round);
     height: 28px;
     width: 28px;
     position: fixed;

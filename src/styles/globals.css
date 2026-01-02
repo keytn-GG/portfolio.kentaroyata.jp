@@ -31,6 +31,7 @@
     --color-paper: #f8efe2;
     --color-copy: 	#bfbfbf;
     --color-highlight: #d7c9ae;
+    --color-dark: #383838;
 
     /* font */
     --font-def: "Helvetica Neue LT", "Helvetica Neue", Helvetica, "Hiragino Sans", "Yu Gothic", 游ゴシック体, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", メイリオ, Meiryo, sans-serif;
@@ -57,20 +58,22 @@
 
     /* box-shadow */
     --box-shadow: 0 3px 15px rgba(90, 74, 55, 0.1);
+    --box-shadow-light: .8rem .8rem 1.2rem rgba(0, 0, 0, .05), -.8rem -.8rem 1.2rem #fff;
     --box-shadow-dark: .8rem .8rem 1.2rem rgba(0, 0, 0, .05), -.8rem -.8rem 1.2rem rgba(0, 0, 0, 1);
     --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, .08), -1rem -1rem 1.5rem rgba(255, 255, 255, 1);
 
     /* transition */
     --transition-all: all .3s ease;
     --transition-all-slow: all 1s cubic-bezier(.2, 1, .2, 1);
-    --transition-nav: transform .6s cubic-bezier(.2, 1, .2, 1);
+    --transition-tf: transform .6s cubic-bezier(.2, 1, .2, 1);
     --transition-hover: background .3s ease, color .3s ease, border .3s ease;
 
     /* border-radius */
+    --border-radius-3px: 3px;
     --border-radius-5px: 5px;
     --border-radius-10px: 10px;
     --border-radius-15px: 15px;
-    --border-radius-50perc: 50%;
+    --border-radius-round: 50%;
     --border-radius-100vw: 100vw;
 
     /* custom property */

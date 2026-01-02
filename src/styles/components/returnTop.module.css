@@ -1,7 +1,7 @@
 .button {
     background-color: var(--color-text-black);
     border: 1px solid var(--color-paper);
-    border-radius: var(--border-radius-50perc);
+    border-radius: var(--border-radius-round);
     color: var(--color-white);
     display: grid;
     height: 40px;
