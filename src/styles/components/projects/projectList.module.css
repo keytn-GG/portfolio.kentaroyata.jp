@@ -4,11 +4,11 @@
     /* padding: var(--space-tight); */
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     .list {
         padding: var(--space-loose);
     }
-}
+} */
 
 @media (max-width:768px) {
     .list {
